@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
     <title>公司员工考勤系统</title>
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main-html/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
-    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
     <!-- toast CSS -->
-    <link href="../plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
     <!-- morris CSS -->
-    <link href="../plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
     <!-- animation CSS -->
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="main-html/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="main-html/css/style.css" rel="stylesheet">
     <!-- color CSS -->
-    <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
+    <link href="main-html/css/colors/blue-dark.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -40,7 +40,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top m-b-0">
         <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></a>
-            <div class="top-left-part"><a class="logo" href="index.jsp"><b><img src="../plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs"><img src="../plugins/images/pixeladmin-text.png" alt="home" /></span></a></div>
+            <div class="top-left-part"><a class="logo" href="index.jsp"><b><img src="plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs"><img src="../plugins/images/pixeladmin-text.png" alt="home" /></span></a></div>
             <ul class="nav navbar-top-links navbar-left m-l-20 hidden-xs">
                 <li>
                     <form role="search" class="app-search hidden-xs">
@@ -63,13 +63,13 @@
         <div class="sidebar-nav navbar-collapse slimscrollsidebar">
             <ul class="nav" id="side-menu">
                 <li style="padding: 10px 0 0;">
-                    <a href="index.jsp" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">菜单</span></a>
+                    <a href="main" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">菜单</span></a>
                 </li>
                 <li>
-                    <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">人员</span></a>
+                    <a href="main-html/profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">人员</span></a>
                 </li>
                 <li>
-                    <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">签到</span></a>
+                    <a href="qian" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">签到</span></a>
                 </li>
                 <li>
                     <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i><span class="hide-menu">选项</span></a>
@@ -175,6 +175,7 @@
                                 <thead>
                                 <tr>
                                     <th>NAME</th>
+                                    <th>SEX</th>
                                     <th>STATUS</th>
                                     <th>DATE</th>
                                     <th>PRICE</th>
@@ -183,43 +184,50 @@
                                 <tbody>
                                 <tr>
                                     <td class="txt-oflo">${name }</td>
+                                    <td>男</td>
                                     <td>已签到</td>
                                     <td class="txt-oflo">April 18</td>
                                     <td><span class="text-success">work</span></td>
                                 </tr>
                                 <tr>
                                     <td class="txt-oflo">李四</td>
+                                    <td>男</td>
                                     <td>已签到</td>
                                     <td class="txt-oflo">April 19</td>
                                     <td><span class="text-info">work</span></td>
                                 </tr>
                                 <tr>
                                     <td class="txt-oflo">张三</td>
+                                    <td>男</td>
                                     <td>已签到</td>
                                     <td class="txt-oflo">April 20</td>
                                     <td><span class="text-danger">24</span></td>
                                 </tr>
                                 <tr>
                                     <td class="txt-oflo">张三</td>
+                                    <td>男</td>
                                     <td>已签到</td>
                                     <td class="txt-oflo">April 21</td>
                                     <td><span class="text-success">24</span></td>
                                 </tr>
                                 <tr>
                                     <td class="txt-oflo">张三</td>
+                                    <td>男</td>
                                     <td>已签到</td>
                                     <td class="txt-oflo">April 22</td>
                                     <td><span class="text-success">24</span></td>
                                 </tr>
                                 <tr>
                                     <td class="txt-oflo">张三</td>
+                                    <td>男</td>
                                     <td>已签到</td>
                                     <td class="txt-oflo">April 23</td>
                                     <td><span class="text-danger">-14</span></td>
                                 </tr>
                                 <tr>
                                     <td class="txt-oflo">张三</td>
-                                    <td>已签到R</td>
+                                    <td>男</td>
+                                    <td>已签到</td>
                                     <td class="txt-oflo">April 22</td>
                                     <td><span class="text-success">64</span></td>
                                 </tr>
@@ -289,36 +297,36 @@
             <!-- /.row -->
         </div>
         <!-- /.container-fluid -->
-        <footer class="footer text-center"> 2017 &copy; Pixel Admin brought to you by wrappixel - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a> </footer>
+        <footer class="footer text-center"> 2020 &copy; 员工签到系统 - willoong <a href="http://localhost:8080/" target="_blank" title="test">test</a> - Collect from <a href="http://localhost:8080/" title="test" target="_blank">test</a> </footer>
     </div>
     <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
 <!-- jQuery -->
-<script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="main-html/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Menu Plugin JavaScript -->
-<script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+<script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
 <!--slimscroll JavaScript -->
-<script src="js/jquery.slimscroll.js"></script>
+<script src="main-html/js/jquery.slimscroll.js"></script>
 <!--Wave Effects -->
-<script src="js/waves.js"></script>
+<script src="main-html/js/waves.js"></script>
 <!--Counter js -->
-<script src="../plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
-<script src="../plugins/bower_components/counterup/jquery.counterup.min.js"></script>
+<script src="plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+<script src="plugins/bower_components/counterup/jquery.counterup.min.js"></script>
 <!--Morris JavaScript -->
-<script src="../plugins/bower_components/raphael/raphael-min.js"></script>
-<script src="../plugins/bower_components/morrisjs/morris.js"></script>
+<script src="plugins/bower_components/raphael/raphael-min.js"></script>
+<script src="plugins/bower_components/morrisjs/morris.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="js/custom.min.js"></script>
-<script src="js/dashboard1.js"></script>
-<script src="../plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+<script src="main-html/js/custom.min.js"></script>
+<script src="main-html/js/dashboard1.js"></script>
+<script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $.toast({
-            heading: 'Welcome to Pixel admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
+            heading: '登陆成功',
+            text: '欢迎  toast TEST  TEST ',
             position: 'top-right',
             loaderBg: '#ff6849',
             icon: 'info',

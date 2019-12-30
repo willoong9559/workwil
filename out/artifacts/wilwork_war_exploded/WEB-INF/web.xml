@@ -16,12 +16,22 @@
 
     <servlet>
         <servlet-name>mainServlet</servlet-name>
-        <servlet-class>com.wilwork.web.loginServlet</servlet-class>
+        <servlet-class>com.wilwork.web.mainServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>mainServlet</servlet-name>
         <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>qianServlet</servlet-name>
+        <servlet-class>com.wilwork.web.qianServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>qianServlet</servlet-name>
+        <url-pattern>/qian</url-pattern>
     </servlet-mapping>
 
 </web-app>

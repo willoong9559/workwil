@@ -8,12 +8,15 @@ import java.io.IOException;
 import java.sql.Connection;
 
 import com.wilwork.dao.UserDao;
+import com.wilwork.dao.YuanDao;
 import com.wilwork.model.User;
+import com.wilwork.model.Yuan;
 import com.wilwork.util.DbUtil;
 
 public class loginServlet extends HttpServlet {
     DbUtil dbUtil = new DbUtil();
     UserDao userDao = new UserDao();
+    YuanDao yuanDao = new YuanDao();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,8 +43,19 @@ public class loginServlet extends HttpServlet {
                 request.setAttribute("error", "用户名或密码错误");
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             } else {
-                System.out.println("yes");
-                response.sendRedirect("main-html/index.jsp");
+                //System.out.println("yes");
+                //response.sendRedirect("main-html/index.jsp");
+                //request.setAttribute("name", "test");
+                //request.getRequestDispatcher("main-html/index.jsp").forward(request, response);
+                try {
+                    Yuan getYuan = yuanDao.get(conn);
+                    String name = getYuan.getName();
+                    Boolean sex = getYuan.isSex();
+                    request.setAttribute("name", name);
+                    request.getRequestDispatcher("main-html/index.jsp").forward(request, response);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

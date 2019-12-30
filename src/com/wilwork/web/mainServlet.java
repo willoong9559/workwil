@@ -18,19 +18,23 @@ public class mainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //this.doPost(request, response);
+
         Connection conn = null;
         try {
-            Yuan yuan = new Yuan();
             conn = dbUtil.getCon();
-            Yuan getYuan = yuanDao.get(conn, yuan);
-            String name = getYuan.getName();
-            Boolean sex = getYuan.isSex();
-            request.setAttribute("name", name);
-            request.getRequestDispatcher("main-html/index.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Yuan getYuan = null;
+        try {
+            getYuan = yuanDao.get(conn);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        String name = getYuan.getName();
+        Boolean sex = getYuan.isSex();
+        request.setAttribute("name", name);
+        request.getRequestDispatcher("main-html/index.jsp").forward(request, response);
     }
 
     @Override
