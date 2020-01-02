@@ -1,5 +1,6 @@
 package com.wilwork.dao;
 
+import com.wilwork.model.User;
 import com.wilwork.model.Yuan;
 
 import java.sql.*;

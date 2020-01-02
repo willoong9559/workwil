@@ -1,5 +1,6 @@
 package com.wilwork.web;
 
+import com.wilwork.dao.LoginYuanDao;
 import com.wilwork.dao.YuanDao;
 import com.wilwork.random.RandomStr;
 import com.wilwork.util.DbUtil;
@@ -24,6 +25,7 @@ public class qianServlet extends HttpServlet {
         Connection conn = null;
         YuanDao yuan = new YuanDao();
         DbUtil dbUtil = new DbUtil();
+        LoginYuanDao loginYuanDao = new LoginYuanDao();
 
         try {
             conn = dbUtil.getCon();
@@ -38,6 +40,12 @@ public class qianServlet extends HttpServlet {
         String password = randomStr.getRandomString(6);
         request.setAttribute("name", "生成账号:" + userName + "密码:" + password);
         request.getRequestDispatcher("main-html/basic-table.jsp").forward(request, response);
+        try {
+            loginYuanDao.insert(conn, userName, password);
+            System.out.println("插入成功2");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         System.out.println(name);
         int Tsex = 0;
         if(sex == "男"){

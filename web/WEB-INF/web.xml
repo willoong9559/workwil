@@ -34,4 +34,24 @@
         <url-pattern>/qian</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>login_yuanServlet</servlet-name>
+        <servlet-class>com.wilwork.web.login_yuanServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>login_yuanServlet</servlet-name>
+        <url-pattern>/y_login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>y_qianServlet</servlet-name>
+        <servlet-class>com.wilwork.web.y_qianServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>y_qianServlet</servlet-name>
+        <url-pattern>/y_qian</url-pattern>
+    </servlet-mapping>
+
 </web-app>

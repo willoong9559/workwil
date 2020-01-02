@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<form action="login_yuan" method="post">
+<form action="y_login" method="post">
     <div class="top">员工考勤系统</div>
     <div class="content">
         <div class="login">
@@ -31,7 +31,6 @@
             <button type="submit" class="logBut">员工登录</button>
             <h1 style="color: red">${error }</h1>
         </div>
-
     </div>
     <div class="power">Powered by 李伟龙</div>
 </form>

@@ -185,7 +185,7 @@
                                 <tr>
                                     <td class="txt-oflo">${name }</td>
                                     <td>男</td>
-                                    <td>未签到</td>
+                                    <td>${mes }</td>
                                     <td class="txt-oflo">预留</td>
                                     <td><span class="text-success">work</span></td>
                                 </tr>
