@@ -1,6 +1,7 @@
 package com.wilwork.web;
 
 import com.wilwork.dao.YuanDao;
+import com.wilwork.random.RandomStr;
 import com.wilwork.util.DbUtil;
 
 import javax.servlet.ServletException;
@@ -19,19 +20,23 @@ public class qianServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("main-html/basic-table.jsp").forward(request, response);
 
         Connection conn = null;
         YuanDao yuan = new YuanDao();
         DbUtil dbUtil = new DbUtil();
+
         try {
             conn = dbUtil.getCon();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         String name = new String(request.getParameter("name").getBytes("iso-8859-1"), "utf-8");//中文乱码
         String sex = new String(request.getParameter("sex").getBytes("iso-8859-1"), "utf-8");
-        request.setAttribute("name", "test");
+        RandomStr randomStr = new RandomStr();
+        String userName = randomStr.getRandomString(6);
+        String password = randomStr.getRandomString(6);
+        request.setAttribute("name", "生成账号:" + userName + "密码:" + password);
         request.getRequestDispatcher("main-html/basic-table.jsp").forward(request, response);
         System.out.println(name);
         int Tsex = 0;

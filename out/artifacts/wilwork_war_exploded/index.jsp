@@ -29,8 +29,10 @@
       <input placeholder="请输入密码" type="password" name="password"/>
     </div>
     <button type="submit" class="logBut">登录</button>
+    <a href="test.jsp" class="YuanlogBut">员工登录</a>
     <h1 style="color: red">${error }</h1>
   </div>
+
 </div>
 <div class="power">Powered by 李伟龙</div>
 </form>

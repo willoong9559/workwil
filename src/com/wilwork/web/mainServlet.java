@@ -32,8 +32,9 @@ public class mainServlet extends HttpServlet {
             e.printStackTrace();
         }
         String name = getYuan.getName();
-        Boolean sex = getYuan.isSex();
+        String num = getYuan.getId();
         request.setAttribute("name", name);
+        request.setAttribute("num_all", num);
         request.getRequestDispatcher("main-html/index.jsp").forward(request, response);
     }
 
